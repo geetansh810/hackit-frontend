@@ -245,7 +245,7 @@ const AddProduct = () => {
   );
   const goBack = () => {
     return (
-      <NavLink to="/admin/dashboard" className="warning-buttons px-5">
+      <NavLink to="/admin/dashboard" className="btn text-warning px-5 text-center">
         Back
       </NavLink>
     );

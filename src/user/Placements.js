@@ -77,12 +77,12 @@ export default function Placements() {
                     </div>
 
                     <div className="explain-bar mt-5">
-                      <div className="explain-contents">
+                      {/* <div className="explain-contents">
                         <div className="explain-title">Eligiblity</div>
                         <div className="explain-subtitle">
                           {placement.eligiblity}
                         </div>
-                      </div>
+                      </div> */}
                       <div className="explain-contents">
                         <div className="explain-title">Job Profile</div>
                         <div className="explain-subtitle">
@@ -102,26 +102,26 @@ export default function Placements() {
                     </div>
 
                     <div className="job-subtitle-wrapper placement-subtitle-wrapper">
-                      <div className="company-name">
-                        <button className="search-buttons detail-button text-primary">
-                          Year
-                          <span className="comp-location text-dark">
-                            {placement.yearStart} - {placement.yearEnd}
+                      {/* <div className="company-name"> */}
+                        <button className="search-buttons detail-button text-primary w-100 text-start">
+                          Eligiblity
+                          <span className="comp-location text-secondary">
+                          {placement.eligiblity}
                           </span>
                         </button>
-                      </div>
+                      {/* </div> */}
                       <div className="d-flex">
-                        <div className="company-name">
-                          <button className="search-buttons detail-button">
+                        {/* <div className="company-name"> */}
+                          <button className="search-buttons detail-button flex-fill">
                             Last Date to Register
                             <span className="comp-location">
                               {changeTimeFormat(placement.lastDateToRegister)}
                             </span>
                           </button>
-                        </div>
+                        {/* </div> */}
 
-                        <div className="company-name ms-4">
-                          <button className="search-buttons detail-button text-warning">
+                        {/* <div className="company-name ms-4"> */}
+                          <button className="search-buttons detail-button text-warning flex-fill">
                             Exam Date
                             <span className="comp-location">
                               {changeTimeFormat(placement.examDateStart)}{" "}
@@ -129,22 +129,30 @@ export default function Placements() {
                               {changeTimeFormat(placement.examDateEnd)}
                             </span>
                           </button>
-                        </div>
+                        {/* </div> */}
                       </div>
 
                       <div className="posted mt-2">
-                        Posted at {changeTimeFormat(placement.updatedAt)}
+                        Posted on {changeTimeFormat(placement.updatedAt)}
                         <span className="app-number">Application Open</span>
                       </div>
                     </div>
 
                     <div className="job-card-buttons">
-                      <a href={placement.registerLink} target="_blank" rel="noreferrer">
+                      <a
+                        href={placement.registerLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <button className="search-buttons card-buttons header-shadow">
                           Register
                         </button>
                       </a>
-                      <a href={API+"/placements/pdf/"+placement._id} target="_blank" rel="noreferrer"> 
+                      <a
+                        href={API + "/placements/pdf/" + placement._id}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <button className="search-buttons card-buttons-msg">
                           Open Document ⮥
                         </button>

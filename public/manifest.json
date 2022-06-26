@@ -1,14 +1,14 @@
 {
-  "short_name": "React App",
+  "short_name": "CoHackIn",
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "icons8-coding-49.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "icons8-coding-49.png",
       "type": "image/png",
       "sizes": "192x192"
     },
