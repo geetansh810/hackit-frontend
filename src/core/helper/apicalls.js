@@ -20,3 +20,13 @@ export const getAllContestsIcons = () => {
         })
         .catch((err) => console.log(err));
 };
+
+export const getAllPlacements = () => {
+    return fetch(`${API}/placements`, {
+        method: "GET",
+    })
+        .then((response) => {
+            return response.json();
+        })
+        .catch((err) => console.log(err));
+};

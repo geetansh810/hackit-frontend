@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { API } from "../backend";
 import Base from "./Base";
 import { getAllContests, getAllContestsIcons } from "./helper/apicalls";
-// import { getAllProducts } from "./helper/coreapicalls";
 
 export default function Home() {
-  // `${API}/contests`
   const [resource, setResource] = useState([]);
   const [dataSet, setDataSet] = useState([]);
 
@@ -240,7 +237,7 @@ export default function Home() {
                 </div>
                 <div className="type-container">
                   <input type="checkbox" id="job12" className="job-style" />
-                  <label >VP or Above</label>
+                  <label htmlFor="">VP or Above</label>
                   <span className="job-number">56</span>
                 </div>
               </div>
@@ -250,37 +247,37 @@ export default function Home() {
               <div className="job-wrapper">
                 <div className="type-container">
                   <input type="checkbox" id="job1" className="job-style" />
-                  <label htmlFor="job1">$700 - $1000</label>
+                  <label for="job1">$700 - $1000</label>
                   <span className="job-number">49</span>
                 </div>
                 <div className="type-container">
                   <input type="checkbox" id="job2" className="job-style" />
-                  <label htmlFor="job2">$1000 - $1200</label>
+                  <label for="job2">$1000 - $1200</label>
                   <span className="job-number">67</span>
                 </div>
                 <div className="type-container">
                   <input type="checkbox" id="job3" className="job-style" />
-                  <label htmlFor="job3">$1200 - $1400</label>
+                  <label for="job3">$1200 - $1400</label>
                   <span className="job-number">24</span>
                 </div>
                 <div className="type-container">
                   <input type="checkbox" id="job4" className="job-style" />
-                  <label htmlFor="job4">$1500 - $1800</label>
+                  <label for="job4">$1500 - $1800</label>
                   <span className="job-number">27</span>
                 </div>
                 <div className="type-container">
                   <input type="checkbox" id="job5" className="job-style" />
-                  <label htmlFor="job5">$2000 - $3000</label>
+                  <label for="job5">$2000 - $3000</label>
                   <span className="job-number">76</span>
                 </div>
                 <div className="type-container">
                   <input type="checkbox" id="job6" className="job-style" />
-                  <label htmlFor="job6">$3000 - $4000</label>
+                  <label for="job6">$3000 - $4000</label>
                   <span className="job-number">22</span>
                 </div>
                 <div className="type-container">
                   <input type="checkbox" id="job6" className="job-style" />
-                  <label htmlFor="job6">$4000 - $5000</label>
+                  <label for="job6">$4000 - $5000</label>
                   <span className="job-number">18</span>
                 </div>
               </div>
@@ -350,12 +347,12 @@ export default function Home() {
                     </div>
 
                     <div className="job-card-buttons">
-                      <a href={contest.href} target="_blank">
+                      <a href={contest.href} target="_blank" rel="noreferrer">
                         <button className="search-buttons card-buttons header-shadow">
                           Register
                         </button>
                       </a>
-                      <a href={"https://" + contest.resource} target="_blank">
+                      <a href={"https://" + contest.resource} target="_blank" rel="noreferrer">
                         <button className="search-buttons card-buttons-msg">
                           Visit Site
                         </button>

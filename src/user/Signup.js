@@ -79,7 +79,7 @@ const Signup = () => {
           <form action="" className="overflow-auto">
             <div className="d-md-flex justify-content-between">
               <div className="form-group mt-4">
-                <label htmlhtmlFor="" className="form-label">
+                <label htmlFor="" className="form-label">
                   First Name
                 </label>
                 <input
@@ -90,7 +90,7 @@ const Signup = () => {
                 />
               </div>
               <div className="form-group mt-4">
-                <label htmlhtmlFor="" className="form-label ">
+                <label htmlFor="" className="form-label ">
                   Last Name
                 </label>
                 <input
@@ -102,7 +102,7 @@ const Signup = () => {
               </div>
             </div>
             <div className="form-group mt-4">
-              <label htmlhtmlFor="" className="form-label ">
+              <label htmlFor="" className="form-label ">
                 Email
               </label>
               <input
@@ -113,7 +113,7 @@ const Signup = () => {
               />
             </div>
             <div className="form-group mt-4">
-              <label htmlhtmlFor="" className="form-label ">
+              <label htmlFor="" className="form-label ">
                 Password
               </label>
               <input

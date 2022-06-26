@@ -10,7 +10,7 @@ const Menu = () => {
       <NavLink to="/" className="navbar-brand fw-bolder text-light">
         <div className="logo">
           <img className="me-3" src={logo} alt="" />
-          HackIT
+          CoHackIn
         </div>
       </NavLink>
 

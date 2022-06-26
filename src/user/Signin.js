@@ -87,7 +87,7 @@ const Signin = () => {
         <div className="col-md-4 offset-sm-3 text-left m-auto my-4">
           <form action="" className="">
             <div className="form-group mt-4">
-              <label htmlhtmlFor="" className="form-label">
+              <label htmlFor="" className="form-label">
                 Email
               </label>
               <input
@@ -98,7 +98,7 @@ const Signin = () => {
               />
             </div>
             <div className="form-group mt-4">
-              <label htmlhtmlFor="" className="form-label">
+              <label htmlFor="" className="form-label">
                 Password
               </label>
               <input
