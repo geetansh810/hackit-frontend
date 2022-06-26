@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import Menu from "./Menu";
 
-function Base({ title = "My title", className = "p-4", children }) {
+function Base({ title = "My title", className = "p-md-4", children }) {
   return (
     <div>
       <Menu />

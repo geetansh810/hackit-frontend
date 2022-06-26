@@ -1125,7 +1125,15 @@ img {
 @media screen and (max-width: 590px) {
   .header-menu {
     display: block;
+    padding: 0 10px;
   }
+ 
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 5%;
+}
 }
 
 @media screen and (max-width: 520px) {
