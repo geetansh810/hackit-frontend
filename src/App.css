@@ -1,38 +1,282 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  background: white;
+  color: #212529;
+  font-family: 'Roboto', sans-serif;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+}
+
+.product-card {
+  /* width: 380px; */
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  margin: 15% auto;
+  background: #fafafa;
+  max-height: 83%;
+}
+
+.value-badge {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: red;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 0 5px 5px 0 !important;
+}
+
+.product-tumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  padding: 50px;
+  background: #f0f0f0;
+}
+
+.product-tumb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-details {
+  padding: 30px;
+}
+
+.product-catagory {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 18px;
+}
+
+.product-details h4 {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #fbb72c;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1.1em;
+}
+
+.product-details h4:hover {
+  color: #363636;
+}
+
+.product-details h5 {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 2px;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 0.9em;
+}
+
+.product-details h5 small {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #367000;
+}
+
+.product-details p {
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 15px;
+  margin-bottom: 18px;
+  color: #999;
+}
+
+.product-bottom-details {
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+}
+
+.product-bottom-details div {
+  float: left;
+  width: 50%;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #fbb72c;
+  font-weight: 600;
+}
+
+.product-price small {
+  font-size: 80%;
+  font-weight: 400;
+  text-decoration: line-through;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.product-links {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-links button {
+  font-size: 17px;
+  display: block;
+  /* position: absolute;
+    bottom: 10px; */
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* .product-links button:hover {
+    color: #fbb72c;
+} */
+
+.banner {
+  width: max-content;
+  position: relative;
+  padding: 10px 20px;
+  animation: loader 1s cubic-bezier(0.5, 0.1, 0.15, 1) alternate infinite;
+}
+
+@keyframes loader {
+  0% {
+    letter-spacing: -1px;
+  }
+
+  100% {
+    letter-spacing: 15px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.banner::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: skewX(-15deg);
+  background-color: #eee;
 }
 
-.App-link {
-  color: #61dafb;
+.banner-left,
+.banner-right {
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  bottom: -30%;
+  transform: skewX(-15deg);
+  background-color: #ccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.banner-left {
+  animation: sub-banner-left 1s cubic-bezier(0.5, 0.1, 0.15, 1) alternate infinite;
+}
+
+@keyframes sub-banner-left {
+  0% {
+    right: 82%;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    right: 90%;
   }
 }
+
+.banner-right {
+  animation: sub-banner-right 1s cubic-bezier(0.5, 0.1, 0.15, 1) alternate infinite;
+}
+
+@keyframes sub-banner-right {
+  0% {
+    left: 82%;
+  }
+
+  100% {
+    left: 90%;
+  }
+}
+
+.banner-left::before,
+.banner-right::before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -1px;
+  border: 22px solid;
+  border-color: transparent;
+}
+
+.banner-left::before {
+  left: -1px;
+  border-left-color: white;
+}
+
+.banner-right::before {
+  right: -1px;
+  border-right-color: white;
+}
+
+.nav-color {
+  /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% ); */
+  background: #360033;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0b8793, #360033);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0b8793, #360033);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.social-logo{
+  width: 30px;
+}
+
+@media (max-height: 680px), screen and (orientation: portrait) { 
+
+  .banner{
+    font-size: 0.6em;
+    width: min-content;
+  }
+
+  .banner-left,
+.banner-right {
+  width: 50px;
+  height: 50%;
+}
+
+}
+
+
+
