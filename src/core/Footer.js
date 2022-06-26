@@ -23,10 +23,10 @@ const Footer = () => {
       </div>
       <div className="container text-center py-2">
         <div className="row">
-          <div className="col-md-3 text-muted text-end">
+          <div className="col-md-3 text-muted text-md-end">
             Made by
           </div>
-          <div className="col-md-6 d-flex text-light gap-4 justify-content-center align-items-center">
+          <div className="col-md-6 d-md-flex text-light gap-4 justify-content-center align-items-center">
             <div>
               <a
                 className="d-flex align-items-center gap-3 text-decoration-none text-light fw-bold"
@@ -87,7 +87,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="col-md-3 text-muted text-start">
+          <div className="col-md-3 text-muted text-md-start">
             in MERN Stack
           </div>
         </div>
