@@ -17,12 +17,12 @@ export default function Routes() {
   return (
     <Router>
       <Switch>
-        <Route path="/" element={<Home />} />
+        <Route path="/upcoming" element={<Home />} />
         <Route exact path="/signup" element={<Signup />} />
         <Route exact path="/signin" element={<Signin />} />
 
         <Route path="/placements" element={<Placements />} />
-        <Route path="/upcoming" element={<Upcoming />} />
+        <Route path="/" element={<Upcoming />} />
 
         <Route
           path="/admin/dashboard"

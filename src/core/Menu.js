@@ -15,10 +15,10 @@ const Menu = () => {
       </NavLink>
 
       <div className="header-menu">
-        <NavLink to="/" className="">
+        <NavLink to="/upcoming" className="">
           Hackathons/Internships/Contests
         </NavLink>
-        <NavLink to="/upcoming" className="">
+        <NavLink to="/" className="">
           Upcoming Contests
         </NavLink>
         <NavLink to="/placements" className="">

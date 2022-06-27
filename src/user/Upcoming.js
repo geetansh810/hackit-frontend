@@ -326,7 +326,7 @@ export default function Upcoming() {
                 Showing {futureContests.length} Contests
               </div>
               <div className="searched-sort">
-                Show: <span className="post-time">All </span>
+                Show: <span className="post-time">Upcoming </span>
                 <span className="menu-icon">▼</span>
               </div>
             </div>

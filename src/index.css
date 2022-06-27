@@ -538,7 +538,7 @@ img {
   }
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1024px) {
   .job-cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -551,6 +551,13 @@ img {
   /* cursor: pointer; */
   transition: 0.2s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 350px;
+}
+
+@media screen and (max-width: 1024px) {
+  .job-card{
+    width: 100%;
+  }
 }
 
 .job-card:hover {
