@@ -18,6 +18,9 @@ const Menu = () => {
         <NavLink to="/" className="">
           Hackathons/Internships/Contests
         </NavLink>
+        <NavLink to="/upcoming" className="">
+          Upcoming Contests
+        </NavLink>
         <NavLink to="/placements" className="">
           Placements Notices
         </NavLink>

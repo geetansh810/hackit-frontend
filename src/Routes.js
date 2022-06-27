@@ -11,6 +11,7 @@ import Signin from "./user/Signin";
 import Signup from "./user/Signup";
 import AddProduct from "./admin/AddProduct";
 import Placements from "./user/Placements";
+import Upcoming from "./user/Upcoming";
 
 export default function Routes() {
   return (
@@ -21,6 +22,7 @@ export default function Routes() {
         <Route exact path="/signin" element={<Signin />} />
 
         <Route path="/placements" element={<Placements />} />
+        <Route path="/upcoming" element={<Upcoming />} />
 
         <Route
           path="/admin/dashboard"

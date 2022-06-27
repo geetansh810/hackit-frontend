@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Base from "./Base";
-import { getAllContests, getAllContestsIcons } from "./helper/apicalls";
+import Base from "../core/Base";
+import { getAllContests, getAllContestsIcons } from "../core/helper/apicalls";
 
-export default function Home() {
+export default function Upcoming() {
   const [resource, setResource] = useState([]);
   const [dataSet, setDataSet] = useState([]);
+  // const [latestContests,setLatestContests]=useState([]);
+  // const [showLatest,setShowLatest]=useState(false);
 
   var contestType = ["Hackathon", "Contest"];
   var difficulty = ["Basic", "Easy", "Medium", "Hard"];
@@ -321,7 +323,7 @@ export default function Home() {
           <div className="searched-jobs">
             <div className="searched-bar">
               <div className="searched-show">
-                Showing {dataSet.length} Contests
+                Showing {futureContests.length} Contests
               </div>
               <div className="searched-sort">
                 Show: <span className="post-time">All </span>
@@ -329,7 +331,7 @@ export default function Home() {
               </div>
             </div>
             <div className="job-cards">
-              {dataSet.map((contest) => {
+              {futureContests.map((contest) => {
                 return (
                   <div className="job-card" key={contest.id}>
                     <div className="job-card-header">
@@ -341,7 +343,9 @@ export default function Home() {
                           ></img>
                         }
                       </div>
-                      <div className="ms-auto text-success fw-bold overflow-hidden">{contest.host}</div>
+                      <div className="ms-auto text-success fw-bold overflow-hidden">
+                        {contest.host}
+                      </div>
                       {/* <div className="menu-dot"></div> */}
                     </div>
 

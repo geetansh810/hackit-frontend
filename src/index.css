@@ -1124,8 +1124,11 @@ img {
 
 @media screen and (max-width: 590px) {
   .header-menu {
-    display: block;
+    display: flex;
     padding: 0 10px;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 10px;
   }
  
   .wrapper {
