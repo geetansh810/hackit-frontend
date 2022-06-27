@@ -1260,5 +1260,6 @@ img {
 
 .placement-card{
   height: max-content;
+  width: 100%;
 }
 
