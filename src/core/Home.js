@@ -10,12 +10,6 @@ export default function Home() {
   var difficulty = ["Basic", "Easy", "Medium", "Hard"];
 
   useEffect(() => {
-    // fetch("https://clist.by/api/v1/resource//?username=minor-project&api_key=76c4a281d8c5636fb8dab0cdd36d6c88c85fb213")
-    //   .then(res => res.json())
-    //   .then((resData) => {
-    //     var realresData = resData["objects"];
-    //     setResource(realresData);
-    //   })
 
     getAllContestsIcons().then((data) => {
       console.log(data.objects);
@@ -41,12 +35,6 @@ export default function Home() {
       setDataSet(realData);
     });
 
-    // fetch("https://clist.by/api/v1/resource//?username=minor-project&api_key=76c4a281d8c5636fb8dab0cdd36d6c88c85fb213")
-    //   .then(res => res.json())
-    //   .then((resData) => {
-    //     var realresData = resData["objects"];
-    //     setResource(realresData);
-    //   })
   }, []);
   // console.log(dataSet.reverse());
 
