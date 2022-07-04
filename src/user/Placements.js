@@ -11,10 +11,11 @@ export default function Placements() {
     getAllPlacements().then((data) => {
       // console.log(data);
       var realresData = data;
+      realresData.reverse();
       setPlacements(realresData);
     });
   }, []);
-  console.log(placements);
+  // console.log(placements);
 
   function reverseString(str) {
     var blocks = str.split("-");
@@ -29,6 +30,18 @@ export default function Placements() {
     var finalStr = "";
     finalStr = finalDate;
     return finalStr;
+  }
+
+  function checkLatest(updatedDate) {
+    var date = new Date();
+    var update = new Date(updatedDate);
+    // console.log(date.getDate()-1);
+    // console.log(update.toISOString());
+    if(update.getFullYear() === date.getFullYear() && update.getMonth() === date.getMonth() && update.getDate() >= date.getDate()-7){
+      // console.log(update.getDate());
+      // console.log("true");
+      return true;
+    }
   }
 
   return (
@@ -61,13 +74,18 @@ export default function Placements() {
               {placements.map((placement) => {
                 return (
                   <div className="placement-card job-card" key={placement._id}>
-                    <div className="placement-card-header px-2">
+                    <div className="placement-card-header px-2 position-relative">
                       <div className="iconsofPlacement">
                         <img src={rgpvLogo} alt=""></img>
                       </div>
                       <div className="ms-auto placement-name">
                         {placement.companyName}
                       </div>
+                      {checkLatest(placement.updatedAt) && (
+                        <div className="position-absolute start-100 translate-middle badge rounded-pill bg-search mb-5">
+                          &#9733; Latest
+                        </div>
+                      )}
                     </div>
 
                     <div className="job-card-title mb-auto h-25">
@@ -103,32 +121,32 @@ export default function Placements() {
 
                     <div className="job-subtitle-wrapper placement-subtitle-wrapper">
                       {/* <div className="company-name"> */}
-                        <button className="search-buttons detail-button text-primary w-100 text-start">
-                          Eligiblity
-                          <span className="comp-location text-secondary">
+                      <button className="search-buttons detail-button text-primary w-100 text-start">
+                        Eligiblity
+                        <span className="comp-location text-secondary">
                           {placement.eligiblity}
-                          </span>
-                        </button>
+                        </span>
+                      </button>
                       {/* </div> */}
                       <div className="d-flex">
                         {/* <div className="company-name"> */}
-                          <button className="search-buttons detail-button flex-fill">
-                            Last Date to Register
-                            <span className="comp-location">
-                              {changeTimeFormat(placement.lastDateToRegister)}
-                            </span>
-                          </button>
+                        <button className="search-buttons detail-button flex-fill">
+                          Last Date to Register
+                          <span className="comp-location">
+                            {changeTimeFormat(placement.lastDateToRegister)}
+                          </span>
+                        </button>
                         {/* </div> */}
 
                         {/* <div className="company-name ms-4"> */}
-                          <button className="search-buttons detail-button text-warning flex-fill">
-                            Exam Date
-                            <span className="comp-location">
-                              {changeTimeFormat(placement.examDateStart)}{" "}
-                              <span className="text-dark"> to </span>{" "}
-                              {changeTimeFormat(placement.examDateEnd)}
-                            </span>
-                          </button>
+                        <button className="search-buttons detail-button text-warning flex-fill">
+                          Exam Date
+                          <span className="comp-location">
+                            {changeTimeFormat(placement.examDateStart)}{" "}
+                            <span className="text-dark"> to </span>{" "}
+                            {changeTimeFormat(placement.examDateEnd)}
+                          </span>
+                        </button>
                         {/* </div> */}
                       </div>
 
