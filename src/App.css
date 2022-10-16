@@ -13,11 +13,29 @@
   border-radius: 0px;
 }
 
+:root {
+  --font-color: #333;
+  --background-color: rgb(246, 246, 246);
+  --link-color: cornflowerblue;
+}
+
+/* 2 */
+[data-theme="dark"] {
+  --font-color: #eee;
+  --background-color: #1c1c24;
+  --link-color: lightblue;
+}
+
+/* 3 */
 body {
-  background: white;
-  color: #212529;
+  background-color: var(--background-color);
+  color: var(--font-color);
   font-family: "Roboto", sans-serif;
 }
+/* body {
+  background: white;
+  color: #212529;
+} */
 
 footer {
   position: sticky;

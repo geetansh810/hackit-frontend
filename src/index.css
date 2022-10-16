@@ -42,7 +42,7 @@
   --body-color: #2f2f33;
   --active-color: #32cd32;
   --active-light-color: #edf4ff;
-  --header-bg-color: #fff;
+  --header-bg-color: rgb(246, 246, 246);
   --search-border-color: #efefef;
   --border-color: #d8d8d8;
   --alert-bg-color: #e8f2ff;
@@ -52,9 +52,16 @@
   --time-button: #fc5757;
   --level-button: #5052d5;
   --button-color: #fff;
+  --job-card-bg: rgb(246, 246, 246);
 }
 
-.dark-mode {
+/* 2 */
+[data-theme="dark"] {
+  --font-color: #eee;
+  --background-color: #1d1d1d;
+  --header-bg-color: #1d1d1d;
+  --link-color: lightblue;
+  --job-card-bg: #292932;
   --body-bg-color: #1d1d1d;
   --theme-bg-color: #13131a;
   --header-bg-color: #1c1c24;
@@ -544,7 +551,7 @@ img {
 
 .job-card {
   padding: 16px 16px;
-  background-color: var(--header-bg-color);
+  background-color: var(--job-card-bg);
   border-radius: 8px;
   /* cursor: pointer; */
   transition: 0.2s;
@@ -686,6 +693,7 @@ img {
 .card-buttons-msg {
   background-color: var(--inactive-color);
   color: var(--subtitle-color);
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 
 .menu-dot {

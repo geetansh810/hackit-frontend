@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.0929800b.css",
-    "main.js": "/static/js/main.1d6d2e11.js",
+    "main.css": "/static/css/main.3432ec73.css",
+    "main.js": "/static/js/main.47514e10.js",
     "static/media/rgpv-logo.jpg": "/static/media/rgpv-logo.a8d3b5b1a4b67c6770ce.jpg",
+    "static/media/cup.png": "/static/media/cup.f5b0bf8e1db1e162a28b.png",
+    "static/media/man.png": "/static/media/man.2c6128523eeebba9e538.png",
     "index.html": "/index.html",
-    "main.0929800b.css.map": "/static/css/main.0929800b.css.map",
-    "main.1d6d2e11.js.map": "/static/js/main.1d6d2e11.js.map"
+    "main.3432ec73.css.map": "/static/css/main.3432ec73.css.map",
+    "main.47514e10.js.map": "/static/js/main.47514e10.js.map"
   },
   "entrypoints": [
-    "static/css/main.0929800b.css",
-    "static/js/main.1d6d2e11.js"
+    "static/css/main.3432ec73.css",
+    "static/js/main.47514e10.js"
   ]
 }

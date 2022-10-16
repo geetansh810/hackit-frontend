@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { isAuthenticated, signout } from "../auth/helper";
 import logo from "../imgs/icons8-coding-49.png";
 import man from "../imgs/man.png";
+import DarkMode from "./DarkMode";
 
 const Menu = () => {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const Menu = () => {
         )}
 
         <div className="dark-light">
-          <svg
+          {/* <svg
             viewBox="0 0 24 24"
             stroke="currentColor"
             strokeWidth="1.5"
@@ -51,9 +52,10 @@ const Menu = () => {
             strokeLinejoin="round"
           >
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-          </svg>
+          </svg> */}
+          <DarkMode />
         </div>
-        <div className="user-menu">
+        {/* <div className="user-menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -66,7 +68,9 @@ const Menu = () => {
           >
             <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
           </svg>
-        </div>
+        </div> */}
+
+        
 
         <div className="user-name">
           {!isAuthenticated() && (
