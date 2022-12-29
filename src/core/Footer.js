@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <a
           className="btn btn-primary btn-md"
-          href="mailto:geetanshagrawal810@gmail.com"
+          href="mailto:geetanshagrawal810@gmail.com;arthraj.01@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
