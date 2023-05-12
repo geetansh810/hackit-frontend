@@ -14,14 +14,15 @@ import AddProduct from "./admin/AddProduct";
 import Placements from "./user/Placements";
 import Upcoming from "./user/Upcoming";
 import Profile from "./user/Profile";
-
+import Students from "./user/Students";
+import Resume from "./profileForm/Resume"
 
 export default function Routes() {
   return (
     <Router>
       <Switch>
         <Route path="/upcoming" element={<Home />} />
-        {/* <Route exact path="/signup" element={<Signup />} /> */}
+        <Route exact path="/signup" element={<Signup />} />
         <Route exact path="/signin" element={<Signin />} />
 
         <Route path="/placements" element={<Placements />} />
@@ -46,10 +47,28 @@ export default function Routes() {
         />
 
         <Route
+          path="/admin/students"
+          element={
+            <AdminRoutes>
+              <Students />
+            </AdminRoutes>
+          }
+        />
+
+        <Route
           path="/profile"
           element={
             <UserRoutes>
               <Profile />
+            </UserRoutes>
+          }
+        />
+
+        <Route
+          path="/createProfile"
+          element={
+            <UserRoutes>
+              <Resume />
             </UserRoutes>
           }
         />

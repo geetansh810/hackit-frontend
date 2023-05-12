@@ -32,6 +32,7 @@ body {
   color: var(--font-color);
   font-family: "Roboto", sans-serif;
 }
+
 /* body {
   background: white;
   color: #212529;
@@ -218,8 +219,7 @@ footer {
 }
 
 .banner-left {
-  animation: sub-banner-left 1s cubic-bezier(0.5, 0.1, 0.15, 1) alternate
-    infinite;
+  animation: sub-banner-left 1s cubic-bezier(0.5, 0.1, 0.15, 1) alternate infinite;
 }
 
 @keyframes sub-banner-left {
@@ -233,8 +233,7 @@ footer {
 }
 
 .banner-right {
-  animation: sub-banner-right 1s cubic-bezier(0.5, 0.1, 0.15, 1) alternate
-    infinite;
+  animation: sub-banner-right 1s cubic-bezier(0.5, 0.1, 0.15, 1) alternate infinite;
 }
 
 @keyframes sub-banner-right {
@@ -282,7 +281,8 @@ footer {
   width: 30px;
 }
 
-@media (max-height: 680px), screen and (orientation: portrait) {
+@media (max-height: 680px),
+screen and (orientation: portrait) {
   .banner {
     font-size: 0.6em;
     width: min-content;
@@ -293,8 +293,4 @@ footer {
     width: 50px;
     height: 50%;
   }
-}
-
-.profile-btn{
-  width: min-content;
 }

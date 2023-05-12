@@ -21,6 +21,14 @@ const AdminDashBoard = () => {
               Create Post
             </NavLink>
           </li>
+          <li className="list-group-item">
+            <NavLink
+              to="/admin/students"
+              className="text-white btn btn-info fw-bold rounded"
+            >
+              Students
+            </NavLink>
+          </li>
         </ul>
       </div>
     );

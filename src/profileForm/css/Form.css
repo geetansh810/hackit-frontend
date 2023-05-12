@@ -1,0 +1,252 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* html {
+  height: 100%;
+  background: rgb(131,58,180);
+background: linear-gradient(203deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+}
+
+#root{
+  background: rgb(131,58,180);
+background: linear-gradient(203deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+body {
+  font-family: montserrat, arial, verdana;
+  background: transparent;
+} */
+
+.msform {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.msform {
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 50%;
+  margin: auto;
+
+  /*stacking divs above each other*/
+  position: relative;
+}
+
+/*inputs*/
+.msform input {
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 13px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+label {
+  width: 100% !important;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.msform input:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #1cd073;
+  border-radius: 10px;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+.msform button {
+  width: auto;
+  background: #fd1d1d;
+  /* font-weight: bold; */
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px 5px;
+}
+
+.msform button:hover,
+.msform button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #1cd073;
+}
+
+.msform .button-previous {
+  width: 200px;
+  background: #c5c5f1;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 0px;
+  margin: 5px 5px;
+}
+
+.msform .button-previous:hover,
+.msform .button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #c5c5f1;
+}
+
+.fs-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.saveButton {
+  background-color: #833ab4;
+  border: 1px solid black;
+  margin-top: 15px;
+
+  /* background-image: url("../images/right-arrow-svgrepo-com.svg"); */
+}
+
+.savebtn input {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #833ab4;
+  line-height: 25px;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 13px;
+}
+
+/* Slider track */
+
+.slider-container input[type="range"]::-webkit-slider-runnable-track {
+  background: #a8e063;
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+}
+
+/* Slider thumb */
+.slider-container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  margin-top: -3px;
+  cursor: pointer;
+}
+
+#sliderInput {
+  padding: 0px;
+}
+
+/* Slider thumb when active */
+.slider-container input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* svg{
+  color: white;
+} */
+
+select {
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 13px;
+  margin-top: 13px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+select:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #1cd073;
+  border-radius: 10px;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+
+.divider {
+  margin: 10px;
+  border: 2px solid #000;
+}
+
+@media only screen and (max-width: 480px) {
+
+  html {
+    margin: 0px;
+    padding: 20px 10px;
+  }
+
+  #root {
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  .msform {
+    height: 100%;
+    width: 100%;
+  }
+
+  .savebtn input {
+    width: 100%;
+  }
+
+  .msform button {
+    width: 100%;
+  }
+
+}
+
+p {
+  margin-left: auto;
+}

@@ -6,7 +6,8 @@ const UserRoutes = ({ children }) => {
   let auth = isAuthenticated();
   let location = useLocation();
 
-  if (!auth || auth.user.role !== 0) {
+  // if (!auth || auth.user.role !== 0) {
+  if (!auth) {
     // Redirect them to the /signin page, but save the current location they were
     // trying to go to when they were redirected. This allows us to send them
     // along to that page after they login, which is a nicer user experience
