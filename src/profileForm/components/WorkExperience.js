@@ -84,6 +84,7 @@ function WorkExperience({ onSave, data, next }) {
                 name="endDate"
                 value={experience.endDate}
                 onChange={(event) => handleInputChange(index, event)}
+                min={experience.startDate}
                 required
               />
             </label>

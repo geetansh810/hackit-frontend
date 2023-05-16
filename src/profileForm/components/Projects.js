@@ -1,9 +1,9 @@
 import React from "react";
-import '../css/Form.css';
+import "../css/Form.css";
 import { useState } from "react";
 
-function Projects({onSave,data,next}){
-    const [projects, setProjects] = useState(data);
+function Projects({ onSave, data, next }) {
+  const [projects, setProjects] = useState(data);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -12,7 +12,16 @@ function Projects({onSave,data,next}){
   };
 
   const handleAddField = () => {
-    setProjects([...projects, { projectName: '', techUsed: '', startDate: '', endDate: '', aboutProject:'' }]);
+    setProjects([
+      ...projects,
+      {
+        projectName: "",
+        techUsed: "",
+        startDate: "",
+        endDate: "",
+        aboutProject: "",
+      },
+    ]);
   };
 
   const handleDeleteField = (index) => {
@@ -28,41 +37,70 @@ function Projects({onSave,data,next}){
     setProjects(values);
   };
 
-
-
   return (
     <>
-    <h1 className='fs-title'>Projects</h1>
-    <h4 className='fs-subtitle'></h4>
-    <form onSubmit={handleSubmit}>
-      {projects.map((project, index) => (
-        <div key={index}>
-          <label>
-            Project Name:
-            <input type="text" name="projectName" value={project.projectName} onChange={(event) => handleInputChange(index, event)} required/>
-          </label>
-          <br />
-          <label>
-            Technologies Used:
-            <input type="text" name="techUsed" value={project.techUsed} onChange={(event) => handleInputChange(index, event)} required/>
-          </label>
-          <br />
-          <label>
-            Start Date:
-            <input type="date" name="startDate" value={project.startDate} onChange={(event) => handleInputChange(index, event)} required/>
-          </label>
-          <br />
-          <label>
-            End Date:
-            <input type="date" name="endDate" value={project.endDate} onChange={(event) => handleInputChange(index, event)} required/>
-          </label>
-          <br />
-          <label>
-          About Project:
-            <input type="text" name="aboutProject" value={project.aboutProject} onChange={(event) => handleInputChange(index, event)}/>
-          </label>
-          <br />
-          <button onClick={() => handleDeleteField(index)}><svg
+      <h1 className="fs-title">Projects</h1>
+      <h4 className="fs-subtitle"></h4>
+      <form onSubmit={handleSubmit}>
+        {projects.map((project, index) => (
+          <div key={index}>
+            <label>
+              Project Name:
+              <input
+                type="text"
+                name="projectName"
+                value={project.projectName}
+                onChange={(event) => handleInputChange(index, event)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Technologies Used:
+              <input
+                type="text"
+                name="techUsed"
+                value={project.techUsed}
+                onChange={(event) => handleInputChange(index, event)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Start Date:
+              <input
+                type="date"
+                name="startDate"
+                value={project.startDate}
+                onChange={(event) => handleInputChange(index, event)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              End Date:
+              <input
+                type="date"
+                name="endDate"
+                value={project.endDate}
+                onChange={(event) => handleInputChange(index, event)}
+                min={project.startDate}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              About Project:
+              <input
+                type="text"
+                name="aboutProject"
+                value={project.aboutProject}
+                onChange={(event) => handleInputChange(index, event)}
+              />
+            </label>
+            <br />
+            <button onClick={() => handleDeleteField(index)}>
+              <svg
                 width="20px"
                 height="20px"
                 viewBox="0 0 24 24"
@@ -79,17 +117,17 @@ function Projects({onSave,data,next}){
                     stroke-linejoin="round"
                   />
                 </g>
-              </svg></button>
-              <hr className="divider"></hr>
-        </div>
-      ))}
-      <button onClick={() => handleAddField()}>Project (+)</button>
-    
-      <div className='savebtn'>
-      <input className='saveButton' type="submit" value="Save & Next" />
-      </div>
-    </form>
+              </svg>
+            </button>
+            <hr className="divider"></hr>
+          </div>
+        ))}
+        <button onClick={() => handleAddField()}>Project (+)</button>
 
+        <div className="savebtn">
+          <input className="saveButton" type="submit" value="Save & Next" />
+        </div>
+      </form>
     </>
   );
 }
