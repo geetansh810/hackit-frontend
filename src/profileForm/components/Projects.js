@@ -45,7 +45,7 @@ function Projects({ onSave, data, next }) {
         {projects.map((project, index) => (
           <div key={index}>
             <label>
-              Project Name:
+              Project Name
               <input
                 type="text"
                 name="projectName"
@@ -56,7 +56,7 @@ function Projects({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              Technologies Used:
+              Technologies Used
               <input
                 type="text"
                 name="techUsed"
@@ -67,7 +67,7 @@ function Projects({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              Start Date:
+              Start Date
               <input
                 type="date"
                 name="startDate"
@@ -78,7 +78,7 @@ function Projects({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              End Date:
+              End Date
               <input
                 type="date"
                 name="endDate"
@@ -90,7 +90,7 @@ function Projects({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              About Project:
+              About Project
               <input
                 type="text"
                 name="aboutProject"

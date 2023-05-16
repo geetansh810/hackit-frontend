@@ -27,7 +27,7 @@ function PersonalForm({ onSave, data ,next}) {
         <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
       </div>
 
-      <div onFocus={()=>{}}>
+      <div>
         <label htmlFor="age">Date of Birth  </label>
         <input type="date" id="dob" name="dob" value={formData.dob} onChange={handleChange} required />
       </div>
@@ -35,7 +35,7 @@ function PersonalForm({ onSave, data ,next}) {
 
       <div>
         <label htmlFor="email">Email Id  </label>
-        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required disabled />
       </div>
 
       <div>

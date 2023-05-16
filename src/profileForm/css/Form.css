@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
 
 /*basic reset*/
 * {
@@ -31,16 +31,14 @@ body {
 }
 
 .msform {
-  background: white;
+  background: #fff;
   border: 0 none;
   border-radius: 0px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.234);
   padding: 20px 30px;
   box-sizing: border-box;
   width: 50%;
   margin: auto;
-
-  /*stacking divs above each other*/
   position: relative;
 }
 
@@ -52,7 +50,6 @@ body {
   margin-bottom: 13px;
   width: 100%;
   box-sizing: border-box;
-  font-family: montserrat;
   color: #2c3e50;
   font-size: 14px;
 }
@@ -128,21 +125,18 @@ label {
 }
 
 .saveButton {
-  background-color: #833ab4;
+  background-color: #2a68c0d4;
   border: 1px solid black;
   margin-top: 15px;
-
-  /* background-image: url("../images/right-arrow-svgrepo-com.svg"); */
 }
 
 .savebtn input {
   width: 20%;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #833ab4;
+  border: 1px solid #fff;
   line-height: 25px;
   box-sizing: border-box;
-  font-family: montserrat;
   color: #fff;
   font-size: 15px;
   font-weight: bold;

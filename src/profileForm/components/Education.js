@@ -46,7 +46,7 @@ function Education({ onSave, data, next }) {
         {education.map((educate, index) => (
           <div key={index}>
             <label>
-              Degree:
+              Degree
               <input
                 type="text"
                 name="degreeName"
@@ -57,7 +57,7 @@ function Education({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              Institution Name:
+              Institution Name
               <input
                 type="text"
                 name="institutionName"
@@ -68,7 +68,7 @@ function Education({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              Start Date:
+              Start Date
               <input
                 type="date"
                 name="startDate"
@@ -91,14 +91,15 @@ function Education({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              Percentage:
+              CGPA
               <input
                 type="number"
                 name="percentage"
                 value={educate.percentage}
                 onChange={(event) => handleInputChange(index, event)}
-                max={100}
+                max={10}
               />
+              
             </label>
             <br />
             <button onClick={() => handleDeleteField(index)}>
