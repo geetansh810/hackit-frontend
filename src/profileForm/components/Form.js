@@ -28,8 +28,8 @@ function PersonalForm({ onSave, data ,next}) {
       </div>
 
       <div>
-        <label htmlFor="age">Age:</label>
-        <input type="number" id="age" name="age" value={formData.age} onChange={handleChange} max={99} required />
+        <label htmlFor="age">Date of Birth:</label>
+        <input type="number" id="dob" name="dob" value={formData.dob} onChange={handleChange}  required />
       </div>
 
 

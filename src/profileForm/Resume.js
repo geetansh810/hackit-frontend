@@ -15,7 +15,7 @@ const Resume = () => {
 
   const [personalData, setPersonalData] = useState({
     name: "",
-    age: "",
+    dob: "",
     email: "",
     phoneNumber: "",
     rollNumber: "",
