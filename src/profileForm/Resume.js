@@ -7,8 +7,17 @@ import Education from "./components/Education";
 import "./css/Form.css";
 import Slider from "./components/Slider";
 import Base from "../core/Base";
+import { API } from "../backend";
+import { updateProfileDetails } from "./helper/apicalls";
+import { isAuthenticated } from "../auth/helper";
+import { useNavigate } from "react-router-dom";
 
 const Resume = () => {
+
+  const navigate = useNavigate();
+
+  const { user, token } = isAuthenticated();
+
   const [step, setStep] = useState(0);
 
   const [allData, setAllData] = useState({});
@@ -26,7 +35,7 @@ const Resume = () => {
 
   const [workExperience, setworkExperienceData] = useState([
     {
-      company: "",
+      companyName: "",
       jobTitle: "",
       startDate: "",
       endDate: "",
@@ -96,6 +105,18 @@ const Resume = () => {
     if (person === null || person === "" || person === "Your Name here") {
       handleFinalDataSubmit();
     } else {
+
+      console.log("all data")
+      console.log(allData)
+
+      updateProfileDetails(user._id, token, allData).then((data) => {
+        console.log("Successfull");
+        console.log(data);
+        navigate("/profile");
+      }).catch(data => {
+        console.log("Error", data);
+      })
+
       let text = `${person} your resume Data has been uploaded please check your Dashboard.`;
       document.getElementById("finalSubmitMessage").innerHTML = text;
     }

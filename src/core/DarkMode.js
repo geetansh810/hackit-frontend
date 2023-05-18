@@ -36,7 +36,7 @@ const DarkMode = () => {
     }, [theme])
 
     return (
-        <div className="toggle-theme-wrapper">
+        <div className="toggle-theme-wrapper me-4 my-3 rounded-pill w-25 button-bg">
             <span>☀️</span>
             <label className="toggle-theme" htmlFor="checkbox">
                 <input

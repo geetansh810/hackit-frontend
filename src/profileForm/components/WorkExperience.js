@@ -13,7 +13,7 @@ function WorkExperience({ onSave, data, next }) {
     setWorkExperience([
       ...workExperience,
       {
-        company: "",
+        companyName: "",
         jobTitle: "",
         startDate: "",
         location: "",
@@ -45,18 +45,18 @@ function WorkExperience({ onSave, data, next }) {
         {workExperience.map((experience, index) => (
           <div key={index} className="">
             <label>
-              Company  
+              Company
               <input
                 type="text"
-                name="company"
-                value={experience.company}
+                name="companyName"
+                value={experience.companyName}
                 onChange={(event) => handleInputChange(index, event)}
                 required
               />
             </label>
             <br />
             <label>
-              Job Title  
+              Job Title
               <input
                 type="text"
                 name="jobTitle"
@@ -67,7 +67,7 @@ function WorkExperience({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              Start Date  
+              Start Date
               <input
                 type="date"
                 name="startDate"
@@ -78,7 +78,7 @@ function WorkExperience({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              End Date  
+              End Date
               <input
                 type="date"
                 name="endDate"
@@ -90,7 +90,7 @@ function WorkExperience({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              Location  
+              Location
               <input
                 type="text"
                 name="location"
@@ -100,7 +100,7 @@ function WorkExperience({ onSave, data, next }) {
             </label>
             <br />
             <label>
-              About Role  
+              About Role
               <input
                 type="text"
                 name="aboutRole"
@@ -135,8 +135,8 @@ function WorkExperience({ onSave, data, next }) {
         <button onClick={() => handleAddField()}>Work Experience (+)</button>
 
         <div className='savebtn'>
-      <input className='saveButton' type="submit" value="Save & Next" />
-      </div>
+          <input className='saveButton' type="submit" value="Save & Next" />
+        </div>
       </form>
     </>
   );

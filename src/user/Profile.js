@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { isAuthenticated } from "../auth/helper";
 import Base from "../core/Base";
 import "../externalCss/main.css";
@@ -6,11 +6,23 @@ import "../externalCss/print.css";
 import "../externalCss/site.css";
 import profileLogo from "../imgs/geetu1.JPG"
 import hiredLogo from "../imgs/hiredLogo.png"
+import { getUserResume } from "./helper/userapicalls";
+
+
 
 const Profile = () => {
   const {
-    user: { name, email, role },
+    user: { name, email, _id }, token
   } = isAuthenticated();
+
+
+  useEffect(() => {
+    getUserResume(_id, token).then((resume) => {
+      console.log(resume);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }, [])
 
   return (
     <Base title="Profile Page">

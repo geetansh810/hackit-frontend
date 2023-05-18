@@ -1290,7 +1290,7 @@ img {
   position: sticky;
   top: 5px;
   z-index: 1000;
-  background-color: whitesmoke;
+  background-color: var(--theme-bg-color);
   padding: 1% 0;
   margin-top: 0;
 }

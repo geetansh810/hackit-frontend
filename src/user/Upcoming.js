@@ -255,7 +255,8 @@ export default function Upcoming() {
                       <div className="iconsofContest">
                         {
                           <img
-                            src={resourseMap.get(contest.resource_id) || cup}
+                            // src={resourseMap.get(contest.resource_id) || cup}
+                            src={cup}
                             alt={contest.host}
                           ></img>
                         }

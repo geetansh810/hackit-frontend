@@ -49,7 +49,8 @@ input:checked+.slider:before {
 .darkToggle:before {
     transform: translateX(26px);
 }
-.darkToggle{
+
+.darkToggle {
     background-color: cornflowerblue;
 }
 
@@ -63,4 +64,8 @@ input:checked+.slider {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.button-bg {
+    border: 2px solid #ccc;
 }

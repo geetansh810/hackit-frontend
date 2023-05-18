@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { isAuthenticated, signout } from "../auth/helper";
-import logo from "../imgs/icons8-coding-49.png";
+// import logo from "../imgs/icons8-coding-49.png";
+import logo from "../imgs/reclog2.png";
 import man from "../imgs/man.png";
 import DarkMode from "./DarkMode";
 
@@ -40,8 +41,8 @@ const Menu = () => {
             <div className="">
               <NavLink to="/" className="fw-bolder text-light">
                 <div className="logo">
-                  CoHackIn
-                  <img className="ms-3" src={logo} alt="" />
+                  {/* RecruitCampus */}
+                  <img className="" src={logo} alt="" />
                 </div>
               </NavLink>
             </div>
@@ -49,7 +50,10 @@ const Menu = () => {
           </div>
 
         </div>
-        <div className="col-md-5">
+        <div className="col-md-5 d-flex justify-content-end">
+
+          <DarkMode />
+
           <div class="navbar-top">
 
             <div class="skew-menu skew-menu-right">
@@ -147,7 +151,7 @@ const Menu = () => {
                           {/* <span className="user-profile">
                         <img src={man} alt="Profile" className="" />
                       </span> */}
-                          Create Profile
+                          Create / Update
                         </NavLink>
                       </li>
 
@@ -168,6 +172,7 @@ const Menu = () => {
                 )}
               </ul>
             </div>
+
           </div>
 
         </div>
