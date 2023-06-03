@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ef91ae6.css",
-    "main.js": "/static/js/main.a4295b7b.js",
+    "main.css": "/static/css/main.c6214b9a.css",
+    "main.js": "/static/js/main.cdb0069f.js",
     "static/media/geetu1.JPG": "/static/media/geetu1.25cca97061dfc504d021.JPG",
     "static/media/hiredLogo.png": "/static/media/hiredLogo.f34b1a6d5439f00a5cba.png",
     "static/media/reclog2.png": "/static/media/reclog2.6bfe677073b0e8f52f44.png",
@@ -9,11 +9,11 @@
     "static/media/cup.png": "/static/media/cup.f5b0bf8e1db1e162a28b.png",
     "static/media/man.png": "/static/media/man.2c6128523eeebba9e538.png",
     "index.html": "/index.html",
-    "main.6ef91ae6.css.map": "/static/css/main.6ef91ae6.css.map",
-    "main.a4295b7b.js.map": "/static/js/main.a4295b7b.js.map"
+    "main.c6214b9a.css.map": "/static/css/main.c6214b9a.css.map",
+    "main.cdb0069f.js.map": "/static/js/main.cdb0069f.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ef91ae6.css",
-    "static/js/main.a4295b7b.js"
+    "static/css/main.c6214b9a.css",
+    "static/js/main.cdb0069f.js"
   ]
 }
