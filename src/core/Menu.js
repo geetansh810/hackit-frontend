@@ -70,7 +70,7 @@ const Menu = () => {
                         to="/admin/dashboard"
                         className=""
                       >
-                        Admin Dashboard
+                        Admin
                       </NavLink>
                     </li>
                     <li>
@@ -118,7 +118,7 @@ const Menu = () => {
                     </li>
                   </Fragment>
                 )}
-                {isAuthenticated() && (
+                {isAuthenticated() && isAuthenticated().user.role === 0 && (
                   <Fragment>
                     <div className="d-flex">
                       <li className="">
@@ -155,21 +155,27 @@ const Menu = () => {
                         </NavLink>
                       </li>
 
-                      <li className="bg-warning"
-                        onClick={() => {
-                          signout(() => {
-                            navigate("/signin");
-                          });
-                        }}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <a>
-                          Signout
-                        </a>
-                      </li>
                     </div>
                   </Fragment>
                 )}
+                {isAuthenticated() && (
+                  <Fragment>
+                    <li className="bg-warning"
+                      onClick={() => {
+                        signout(() => {
+                          navigate("/signin");
+                        });
+                      }}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <a>
+                        Signout
+                      </a>
+                    </li>
+
+                  </Fragment>
+                )}
+
               </ul>
             </div>
 
